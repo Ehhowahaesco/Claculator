@@ -9,9 +9,22 @@ import static Package.Assistant.*;
 public class Main {
 
     public static void main(String[] args) throws IllegalArgumentException {
+
+        String [] romeOutput = new String[]{"I","II","III","IV","V","VI","VII","VIII","IX", "X","XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX",
+                "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL", "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L","LI","LII","LIII","LIV","LV","LVI","LVII","LVIII","LIX", "LX", "LXI", "LXII", "LXIII"
+                , "LXIV", "LXV", "LXVI", "LXVII", "LXVIII", "LXIV", "LXX", "LXXI", "LXXII", "LXXIII", "LXXIV", "LXXV", "LXXVI", "LXXVII", "LXXVIII", "LXXIX", "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LXXXIV", "LXXXV", "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX","XC", "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C"
+        };
+        int [] arabOutput= new int[100];
+
+        for(int i = 0; i < arabOutput.length; i++){
+            arabOutput[i] = i + 1;
+        }
+
+
+
         String romeOrArab = "null";
-        String [] rome = new String[]{"X","I","II","III","IV","V","VI","VII","VIII","IX"};
-        String [] arab = new String[]{"10","1","2","3","4","5","6","7","8","9"};
+        String [] rome = new String[]{"I","II","III","IV","V","VI","VII","VIII","IX", "X",};
+        String [] arab = new String[]{"1","2","3","4","5","6","7","8","9", "10"};
         String input = null;
         String[] inputArray = new String[2];
 
@@ -35,7 +48,7 @@ public class Main {
           int number2 =  toInt(inputArray[2],rome, arab);
             int result = calc(number1, number2, inputArray[1]);
             String resultString = Integer.toString(result);
-            System.out.println(toRom(resultString,rome, arab));
+            System.out.println(toRom(resultString,romeOutput, arabOutput));
         }
         else if(romeOrArab == "ARAB"){
             int number1 = Integer.parseInt(inputArray[0]);
